@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Open Source Community</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+        
+        .logo-container {
+            transition: all 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+        
+        /* Animasi fade in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .animate-delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .animate-delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        /* Floating animation */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        .achievement-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Header -->
+  <header class="hero-gradient text-white sticky top-0 z-50 shadow-lg">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo dan Judul -->
+            <div class="logo-container flex items-center space-x-2">
+                <div class="flex items-center justify-center w-12 h-12 bg-white rounded-lg">
+                    <img src="logo.png" alt="Logo TekajeClass" class="w-8 h-8">
+                </div>
+                <h1 class="text-2xl font-bold">Forum <span class="text-yellow-300">Open Source</span></h1>
+            </div>
+            
+           
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Selamat Datang di <span class="text-yellow-300">Forum Open Source</span></h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90">Tempat yang tepat untuk mengembangkan skill, dan memperdalam kemampuan IT anda. Upgrade skill bersama komunitas yang solid.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://shorturl.at/qA7aA" target="_blank" class="cta-button bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-lg inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        Materi Pembelajaran
+                    </a>
+                     <!-- Link Hubungi Kami -->
+            <a href="mailto:tekajemodul@gmail.com" target="_blank" class="text-black hover:text-white-300 cta-button bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-lg inline-flex items-center">
+               Hubungi Kami
+            </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-fade-in animate-delay-100">
+                <img src="foto.jpg" alt="Belajar Bareng ges" class="rounded-lg shadow-2xl floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Prestasi Kami</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Beberapa pencapaian luar biasa dari komunitas kami</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="achievement-card bg-white rounded-xl p-8 border border-gray-100 animate-fade-in animate-delay-100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 mx-auto">     
+                        <img src="trophy.png" class="w-10 h-10"> 
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Juara 2 Lomba Networking Nasional</h3>
+                    <p class="text-gray-600 text-center">Berhasil mendapatkan Juara 2 Lomba Networking Tingkat Nasional di Universitas Negeri Jakarta (UNJ). Dengan event yang bernama INACOMP 1.0</p>
+                </div>
+                
+                <div class="achievement-card bg-white rounded-xl p-8 border border-gray-100 animate-fade-in animate-delay-200">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                       <img src="trophy.png" class="w-10 h-10"> 
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Juara 3 Lomba Networking Jabodetabek</h3>
+                    <p class="text-gray-600 text-center">Berhasil mendapatkan Juara 3 Lomba Networking Tingkat Jabodetabek di Universitas Bakrie. Dengan event yang bernama Compiler XV </p>
+                </div>
+                
+            <!--    <div class="achievement-card bg-white rounded-xl p-8 border border-gray-100 animate-fade-in animate-delay-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <img src="trophy.png" class="w-10 h-10"> 
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">10+ Penghargaan</h3>
+                    <p class="text-gray-600 text-center">Mendapatkan berbagai penghargaan di bidang pendidikan dan pengembangan komunitas.</p>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 flex flex-col items-start md:flex-row md:items-center">
+                    <div class="w-10 h-10 bg-white rounded-lg mr-3 flex items-center justify-center">
+                        <img src="logo.png" alt="Logo kecil TekajeClass" class="w-6 h-6">
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold">Property of FORUM <span class="text-yellow-300">OPEN SOURCE</span></h2>
+                        <p class="text-sm text-gray-300">IT Enthusiast Community</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-yellow-300 transition-colors">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
